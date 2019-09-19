@@ -1,0 +1,12 @@
+<button (click)="createChart()" class="btn btn-primary mr-5">Let's create a custom chart!</button>
+<button (click)="rmFirst()" class="btn btn-danger mr-5">Remove Chart</button>
+<button (click)="saveState()" class="btn btn-warning mr-5">Save</button>
+<div class="row mt-5" *ngIf="showMsg">
+    <div class="col-xs-12 col-md-12 text-center">
+      <p class="alert alert-success">
+          <strong>Charts Saved Successfully!</strong>
+          <button (click)="hideme()" class="btn btn-danger  ml-5">x</button>
+      </p>
+    </div>
+  </div>
+<div #charts id="test" class="row"></div>

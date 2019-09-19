@@ -1,0 +1,31 @@
+<div *ngIf="currentUser">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav container">
+        <a class="nav-item nav-link" routerLink="/"><h3>CES</h3></a>
+    </div>
+</nav>
+<div class="container" *ngIf="currentUser">
+<div class="row">
+    <div class="col-md-2">
+        <nav class="nav flex-column">
+            <a class="nav-link active" routerLink="/profile">Profile</a>
+            <a class="nav-link" routerLink="/">Dashboard</a>
+            <a class="nav-link" routerLink="/settings">Settings</a>
+            <a class="nav-link" (click)="logout()">Logout</a>
+        </nav>
+    </div>
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+</div>
+</div>
+<div class="container" *ngIf="!currentUser">
+    <router-outlet></router-outlet>
+</div>
+<!-- credits -->
+<div class="text-center mt-4">
+    <p>
+        <a href="#" target="_top">CES Test By Prasad Bugad.</a>
+    </p>
+</div>
